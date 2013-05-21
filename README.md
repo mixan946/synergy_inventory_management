@@ -77,7 +77,7 @@ Quick group products processing controls from the right perform just the most co
 
  * Add a taxon to selected products (select taxon from combo-box).
 
- * Delete a taxon to selected products.
+ * Delete a taxon from selected products.
 
  * Delete selected products.
 
