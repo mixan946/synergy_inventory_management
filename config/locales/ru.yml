@@ -1,6 +1,7 @@
 ---
 ru:
   sim:
+    delete_taxon: "Удалить таксон"
     edit_multiple_products: "Управление номенклатурой"
     with_selected: "С выбранными"
     catalog: "Каталог"

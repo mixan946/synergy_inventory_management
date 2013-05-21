@@ -9,4 +9,8 @@ Taxon.class_eval do
     self.children.each { |ch| ch.update_attributes(:taxonomy_id => self.taxonomy.id) }
     true
   end
+
+  def products_taxons
+    products.map{|p| Taxon.joins(:products).where('products.id = ?', p.id)}.flatten.compact.uniq - [self]
+  end
 end

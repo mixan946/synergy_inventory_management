@@ -1,5 +1,6 @@
 Product.class_eval do
   attr_accessor :add_taxon
+  attr_accessible :delete_taxon
   after_save :add_taxon_save
 
   def active?
@@ -15,5 +16,9 @@ Product.class_eval do
     taxon = Taxon.find(add_taxon)
     self.taxons << taxon if !self.taxons.include? taxon
     true
+  end
+
+  def delete_taxon=(id)
+    taxons.delete(Taxon.find(id))
   end
 end

@@ -14,15 +14,15 @@ Install synergy_inventory_management from git:
 Bundle up with:
 
     bundle install
-    
+
 Run the rake task that copies the assets to your project:
 
     rake synergy_inventory_management:install
-       
+
 Now you should be able to boot up your server with:
 
-    rails s  
-    
+    rails s
+
 Enjoy!
 
 
@@ -38,7 +38,7 @@ Usage
 You can access the interface in Products -> Inventory management menu.
 
 From the left there is a tree of taxonomies, where admin can manage nodes just like he does it in /admin/taxonomies now (create, move, rename etc.). After each taxon there is a number of products, having this taxon. By clicking on a taxon or taxonomy admin can see products having taxons in a selected node.
- 
+
 Products are shown in Products list. Products list contains the following columns:
 
  * Selecting checkbox (helps to select a set of products for group processing).
@@ -51,7 +51,7 @@ Products are shown in Products list. Products list contains the following column
 
  * Indicator if a product has image
 
- * Quick actions 
+ * Quick actions
 
 Products list have pagination and "products per page" selector (10/50/100/All).
 
@@ -62,7 +62,7 @@ Each product has the following quick actions (from left to right):
  * Preview the product on site (opens in a new tab).
 
  * Edit product.
- 
+
  * Clone product.
 
  * Delete product.
@@ -76,6 +76,8 @@ Quick group products processing controls from the right perform just the most co
  * Quick hide from now.
 
  * Add a taxon to selected products (select taxon from combo-box).
+
+ * Delete a taxon to selected products.
 
  * Delete selected products.
 

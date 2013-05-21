@@ -1,6 +1,7 @@
 ---
 en:
   sim:
+    delete_taxon: "Delete taxon"
     edit_multiple_products: "Inventory management"
     with_selected: "With selected"
     catalog: "Catalog"
