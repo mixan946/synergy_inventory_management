@@ -11,6 +11,11 @@ Taxon.class_eval do
   end
 
   def products_taxons
-    products.map{|p| Taxon.joins(:products).where('products.id = ?', p.id)}.flatten.compact.uniq - [self]
+    if children.empty?
+      products.map{|p| Taxon.joins(:products).where('products.id = ?', p.id)}.flatten.compact.uniq - [self]
+    else
+      children.map{|t| t.products_taxons}.flatten.compact.uniq - [self]
+    end
   end
+
 end
