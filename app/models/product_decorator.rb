@@ -1,5 +1,6 @@
 Product.class_eval do
-  attr_accessible :delete_taxon, :add_taxon
+  attr_accessor :add_taxon
+  attr_accessible :delete_taxon
   after_save :add_taxon_save
 
   def active?
