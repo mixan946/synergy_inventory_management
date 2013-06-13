@@ -12,9 +12,9 @@ Taxon.class_eval do
 
   def products_taxons
     if children.empty?
-      products.map{|p| Taxon.joins(:products).where('products.id = ?', p.id)}.flatten.compact.uniq - [self]
+      products.map{|p| Taxon.joins(:products).where('products.id = ?', p.id)}.flatten.compact.uniq
     else
-      children.map{|t| t.products_taxons}.flatten.compact.uniq - [self]
+      children.map{|t| t.products_taxons}.flatten.compact.uniq
     end
   end
 
