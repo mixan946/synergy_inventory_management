@@ -70,7 +70,7 @@
           <tbody>
             <% @collection.each do |product| %>
               <tr id="<%= dom_id product %>">
-                <td><%= check_box_tag 'product_ids[]', product.id, false, :class => 'product-select' %></td>
+                <td class="align-center"><%= check_box_tag 'product_ids[]', product.id, false, :class => 'product-select' %></td>
                 <td><%= product.sku %></td>
                 <td><%= product.name %></td>
                 <td><%= product.price %></td>
