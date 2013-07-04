@@ -22,7 +22,7 @@
         <div class="sidebar-title">
           <span><%= t("sim.catalog") %></span>
         </div>
-        <div id='taxonomy_tree' style=" overflow: auto">
+        <div id='taxonomy_tree' style=" overflow: auto" class="sim_tree">
           <ul><%= render :partial => "taxon", :collection => Spree::Taxon.roots, :locals => {:current_taxon => @taxon} %></ul>
         </div>
       <% end %>
