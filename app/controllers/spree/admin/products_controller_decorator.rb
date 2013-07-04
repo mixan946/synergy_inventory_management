@@ -6,7 +6,7 @@ module Spree
 
     def edit_multiple
       session[:im_per_page] = params[:per_page].to_i if !params[:per_page].nil?
-      @taxon = params[:id].present? ? Taxon.find(params[:id]) : Taxon.root
+      @taxon = params[:id].present? ? Taxon.find_by_permalink(params[:id]) : Taxon.root
       product_ids = @taxon.present? ? @taxon.self_and_descendants.map { |tax| tax.product_ids }.flatten.uniq : []
 
       params[:q] ||= {}
