@@ -3,7 +3,7 @@
   width: 100%;  
 }
 
-#synergy_imi #taxonomy_tree ul{
+#taxonomy_tree > ul{
   margin-right:21px;
 }
 
