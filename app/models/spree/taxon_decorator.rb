@@ -3,7 +3,7 @@ module Spree
     after_save :update_children_taxonomy, :if => :taxonomy_id_changed?
 
     def not_deleted_products_count
-      self.self_and_descendants.map { |tax| tax.products.select(:id).not_deleted }.flatten.uniq.size
+      self.self_and_descendants.map { |tax| tax.products.select("spree_products.id").not_deleted }.flatten.uniq.size
     end
 
     def update_children_taxonomy
