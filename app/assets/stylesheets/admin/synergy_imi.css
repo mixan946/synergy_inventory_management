@@ -3,6 +3,10 @@
   width: 100%;  
 }
 
+#synergy_imi #taxonomy_tree ul{
+  margin-right:21px;
+}
+
 #synergy_imi #products_actions{
   margin-bottom: 20px;
 }
