@@ -60,9 +60,9 @@
           <thead>
             <tr>
               <th><%= check_box_tag 'check-all', 1, false, :id => 'check-all' %></th>
-              <th><%= t("sku") %></th>
-              <th><%= sort_link @search, :name, t("name") %></th>
-              <th><%= sort_link @search, :master_default_price_amount, t("master_price") %></th>
+              <th><%= Spree.t("sku") %></th>
+              <th><%= sort_link @search, :name, Spree.t("name") %></th>
+              <th><%= sort_link @search, :master_default_price_amount, Spree.t("master_price") %></th>
               <th><%= t("sim.photo") %></th>
               <th class="actions"></th>
             </tr>
